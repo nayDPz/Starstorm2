@@ -72,6 +72,9 @@ namespace EntityStates.Chirr
             {
 				hitPoint = raycastHit.point;
 			}
+			Vector3 victimFootPosition = aimOrigin;
+			if (this.grabController.IsGrabbing()) victimFootPosition = GetBetterFootPosition();
+			hitPoint.y = Mathf.Min(hitPoint.y - 0.1f, victimFootPosition.y); // if hitpoint is higher than footposition, it wont be pretty
 			if (this.areaIndicatorInstance)
 			{
 				this.areaIndicatorInstance.transform.position = hitPoint;
@@ -79,15 +82,14 @@ namespace EntityStates.Chirr
 			}
 
 			//calculate trajectory with no upwards velocity
-			Vector3 victimFootPosition = aimOrigin;
-			if (this.grabController.IsGrabbing()) victimFootPosition = GetBetterFootPosition();
+			
 			float flightDuration = Trajectory.CalculateFlightDuration(victimFootPosition.y, hitPoint.y, 0f, Physics.gravity.y + extraGravity);
-			if (flightDuration <= .2f) flightDuration = .2f; // hopefully final crash fix
+			if (float.IsNaN(flightDuration)) flightDuration = .2f; // hopefully final crash fix
 			Vector3 hBetween = hitPoint - aimOrigin;
 			hBetween.y = 0;
 			float hDistance = hBetween.magnitude;
 			float hSpeed = hDistance / flightDuration;
-
+			
 			this.desiredTrajectory = hSpeed * hBetween.normalized;
 		}
 
