@@ -52,31 +52,31 @@ namespace SS2.Items
         {
             _procEffect = SS2Assets.LoadAsset<GameObject>("StrangeCanEffect", SS2Bundle.Items);
             GlobalEventManager.onServerDamageDealt += OnServerDamageDealt;
-            On.RoR2.Orbs.VineOrb.OnArrival += VineOrb_OnArrival;
+            //On.RoR2.Orbs.VineOrb.OnArrival += VineOrb_OnArrival;
             sticky = ProcTypeAPI.ReserveProcType();
         }
 
         // too lazy to ilhook. its beta code so i dont want to keep fixing it
         // noxious throsn spreads bomba :3
-        private void VineOrb_OnArrival(On.RoR2.Orbs.VineOrb.orig_OnArrival orig, VineOrb self)
-        {
-            //vanilla doesnt nullcheck. neither shall i >:3
-            if (self.target.healthComponent.body.HasBuff(SS2Content.Buffs.BuffStickyOverloader)) // dont add bomba if already bomba
-            {
-                orig(self);
-                return;
-            }
-            orig(self);
+        //private void VineOrb_OnArrival(On.RoR2.Orbs.VineOrb.orig_OnArrival orig, VineOrb self)
+        //{
+        //    //vanilla doesnt nullcheck. neither shall i >:3
+        //    if (self.target.healthComponent.body.HasBuff(SS2Content.Buffs.BuffStickyOverloader)) // dont add bomba if already bomba
+        //    {
+        //        orig(self);
+        //        return;
+        //    }
+        //    orig(self);
             
-            foreach (VineOrb.SplitDebuffInformation s in self.splitDebuffInformation)
-            {
-                if(s.index == SS2Content.Buffs.BuffStickyOverloader.buffIndex)
-                {
-                    StickyOverloaderController.TrySpawnBomb(self.target.healthComponent.body, s.attacker.GetComponent<CharacterBody>());
-                    return;
-                }
-            }
-        }
+        //    foreach (VineOrb.SplitDebuffInformation s in self.splitDebuffInformation)
+        //    {
+        //        if(s.index == SS2Content.Buffs.BuffStickyOverloader.buffIndex)
+        //        {
+        //            StickyOverloaderController.TrySpawnBomb(self.target.healthComponent.body, s.attacker.GetComponent<CharacterBody>());
+        //            return;
+        //        }
+        //    }
+        //}
 
         public override bool IsAvailable(ContentPack contentPack)
         {

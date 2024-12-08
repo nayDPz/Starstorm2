@@ -84,7 +84,7 @@ namespace EntityStates.NemCommando
             float damage = damageCoefficient * damageStat;
             Ray aimRay = GetAimRay();
             DamageTypeCombo damageType = DamageType.Generic;
-            damageType.damageSource = DamageSource.Utility;
+            //damageType.damageSource = DamageSource.Utility;
             ProjectileManager.instance.FireProjectile(
                 projectilePrefab,
                 aimRay.origin,
@@ -95,8 +95,8 @@ namespace EntityStates.NemCommando
                 RollCrit(),
                 DamageColorIndex.Default,
                 null,
-                projectileSpeed,
-                damageType);
+                projectileSpeed);
+                //damageType);
         }
 
         public override void OnExit()

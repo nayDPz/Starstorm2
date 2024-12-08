@@ -65,7 +65,7 @@ namespace EntityStates.Cyborg2
             {
                 Ray aimRay = base.GetAimRay();
                 DamageTypeCombo damageType = DamageType.SlowOnHit;
-                damageType.damageSource = DamageSource.Primary;
+                //damageType.damageSource = DamageSource.Primary;
                 new BulletAttack
                 {
                     aimVector = aimRay.direction,

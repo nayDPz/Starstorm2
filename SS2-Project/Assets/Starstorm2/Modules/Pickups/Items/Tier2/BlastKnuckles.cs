@@ -44,7 +44,7 @@ namespace SS2.Items
         private void OnHitEnemy(On.RoR2.GlobalEventManager.orig_ProcessHitEnemy orig, GlobalEventManager self, DamageInfo damageInfo, GameObject victim)
         {
 			orig(self, damageInfo, victim);
-			if (damageInfo.damage <= 0 || !damageInfo.damageType.IsDamageSourceSkillBased || !damageInfo.attacker || !damageInfo.attacker.TryGetComponent(out CharacterBody body)) return;
+			if (damageInfo.damage <= 0 || damageInfo.procCoefficient <= 0 || !damageInfo.attacker || !damageInfo.attacker.TryGetComponent(out CharacterBody body)) return;
 			Vector3 position = damageInfo.position;
 			Vector3 between = body.corePosition - position;
 			if (body && body.HasBuff(SS2Content.Buffs.BuffBlastKnucklesCharge) && between.sqrMagnitude <= sqrRange)

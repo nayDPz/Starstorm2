@@ -175,7 +175,7 @@ namespace SS2.Components
 
             CharacterBody ownerBody = this.owner ? this.owner.GetComponent<CharacterBody>() : null;
             DamageTypeCombo damageType = DamageType.BonusToLowHealth;
-            damageType.damageSource = DamageSource.Secondary;
+            //damageType.damageSource = DamageSource.Secondary;
             DamageInfo damageInfo = new DamageInfo
             {
                 position = base.transform.position,

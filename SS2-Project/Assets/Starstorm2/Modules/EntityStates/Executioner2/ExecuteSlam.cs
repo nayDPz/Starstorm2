@@ -159,7 +159,7 @@ namespace EntityStates.Executioner2
 
             bool crit = RollCrit();
             DamageTypeCombo damageType = DamageType.Generic;
-            damageType.damageSource = DamageSource.Special;
+            //damageType.damageSource = DamageSource.Special;
             BlastAttack blast = new BlastAttack()
             {
                 radius = slamRadius,

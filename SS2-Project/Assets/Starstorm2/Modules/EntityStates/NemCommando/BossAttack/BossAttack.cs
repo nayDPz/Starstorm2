@@ -82,7 +82,7 @@ namespace EntityStates.Nemmando
             }
 
             DamageTypeCombo damageType = DamageType.Stun1s;
-            damageType.damageSource = DamageSource.Special;
+            //damageType.damageSource = DamageSource.Special;
             blastAttack = new BlastAttack()
             {
                 attacker = gameObject,

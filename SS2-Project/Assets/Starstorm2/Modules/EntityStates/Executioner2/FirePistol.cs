@@ -74,7 +74,7 @@ namespace EntityStates.Executioner
                     Ray r = GetAimRay();
 
                     DamageTypeCombo damageType = DamageType.Generic;
-                    damageType.damageSource = DamageSource.Primary;
+                    //damageType.damageSource = DamageSource.Primary;
                     BulletAttack bullet = new BulletAttack
                     {
                         aimVector = r.direction,

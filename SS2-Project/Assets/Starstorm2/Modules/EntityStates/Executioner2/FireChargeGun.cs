@@ -158,7 +158,7 @@ namespace EntityStates.Executioner2
                 }
 
                 DamageTypeCombo damageType = DamageType.Shock5s;
-                damageType.damageSource = DamageSource.Secondary;
+                //damageType.damageSource = DamageSource.Secondary;
                 var bulletAttack = new BulletAttack
                 {
                     aimVector = vec,

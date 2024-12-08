@@ -104,18 +104,18 @@ namespace SS2.Equipments
                     dotIndex = poisonDotIndex,
                 };
                 DotController.InflictDot(ref inflictDotInfo);
-                DotController dotController = DotController.FindDotController(victimBody.gameObject);
-                if (!dotController) return;
-                int j = 0;
-                List<DotController.DotStack> dotStackList = dotController.dotStackList;
-                while (j < dotStackList.Count)
-                {
-                    if (dotStackList[j].dotIndex == poisonDotIndex)
-                    {
-                        dotStackList[j].timer = Mathf.Max(dotStackList[j].timer, dotStackList[j].totalDuration);
-                    }
-                    j++;
-                }
+                //DotController dotController = DotController.FindDotController(victimBody.gameObject);
+                //if (!dotController) return;
+                //int j = 0;
+                //List<DotController.DotStack> dotStackList = dotController.dotStackList;
+                //while (j < dotStackList.Count)
+                //{
+                //    if (dotStackList[j].dotIndex == poisonDotIndex)
+                //    {
+                //        dotStackList[j].timer = Mathf.Max(dotStackList[j].timer, dotStackList[j].totalDuration);
+                //    }
+                //    j++;
+                //}
             }
         }
         // multiply poison dot damage by victim health fraction
@@ -291,7 +291,7 @@ namespace SS2.Equipments
                 {                  
 
                     Vector3 spreadDirection = Util.ApplySpread(aimDirection, minSpread + spreadPerProjectile*i, maxSpread + spreadPerProjectile*i, 1, 1);
-                    ProjectileManager.instance.FireProjectile(projectilePrefab, origin, Util.QuaternionSafeLookRotation(spreadDirection), base.gameObject, base.characterBody.damage * projectileDamageCoefficient, 0f, false, DamageColorIndex.Default, null, trueSpeed, null);
+                    ProjectileManager.instance.FireProjectile(projectilePrefab, origin, Util.QuaternionSafeLookRotation(spreadDirection), base.gameObject, base.characterBody.damage * projectileDamageCoefficient, 0f, false, DamageColorIndex.Default, null, trueSpeed);
                 }
             }
         }

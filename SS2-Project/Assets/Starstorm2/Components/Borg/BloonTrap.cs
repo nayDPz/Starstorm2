@@ -10,7 +10,7 @@ namespace SS2.Components
 		public float moneyMultiplier;
 		public int baseMaxMoney = 25;
         public EntityStateMachine machine;
-        public float executeThreshold = .15f;
+        public float executeThreshold = .1f;
 		public TetherVfxOrigin tetherVfxOrigin;
 		public float radius = 14f;
 		public float grantEliteBuffRadius = 64f;

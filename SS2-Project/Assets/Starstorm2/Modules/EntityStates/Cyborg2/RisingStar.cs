@@ -206,7 +206,7 @@ namespace EntityStates.Cyborg2
                 if (hurtBox)
                     this.RemoveIndicator(hurtBox);
                 DamageTypeCombo damageType = DamageType.Generic;
-                damageType.damageSource = DamageSource.Secondary;
+                //damageType.damageSource = DamageSource.Secondary;
                 BulletAttack bulletAttack = new BulletAttack
                 {
                     aimVector = direction,

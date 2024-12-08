@@ -127,7 +127,7 @@ namespace EntityStates.Executioner2
                         Util.PlaySound(soundString, gameObject);
                         //previousTargets.Add(hurtBox.healthComponent);
                         DamageTypeCombo damageType = DamageType.Generic;
-                        damageType.damageSource = DamageSource.Primary;
+                        //damageType.damageSource = DamageSource.Primary;
                         ExecutionerTaserOrb taserOrb = new ExecutionerTaserOrb();
                         taserOrb.bouncedObjects = new List<HealthComponent>();
                         taserOrb.attacker = gameObject;

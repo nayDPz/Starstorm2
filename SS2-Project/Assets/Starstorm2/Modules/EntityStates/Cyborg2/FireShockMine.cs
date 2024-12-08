@@ -39,7 +39,7 @@ namespace EntityStates.Cyborg2
 				fireProjectileInfo.force = 0;
 				fireProjectileInfo.crit = RollCrit();
 				DamageTypeCombo damageType = DamageType.Shock5s;
-				damageType.damageSource = DamageSource.Secondary;
+				//damageType.damageSource = DamageSource.Secondary;
 				fireProjectileInfo.damageTypeOverride = damageType;
 				ProjectileManager.instance.FireProjectile(fireProjectileInfo);
 			}

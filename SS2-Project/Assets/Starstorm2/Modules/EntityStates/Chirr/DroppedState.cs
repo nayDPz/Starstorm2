@@ -259,7 +259,7 @@ namespace EntityStates.Chirr
 						blastAttack.falloffModel = BlastAttack.FalloffModel.Linear;
 						blastAttack.damageColorIndex = DamageColorIndex.Default;
 						DamageTypeCombo damageType = DamageType.Stun1s;
-						damageType.damageSource = DamageSource.Utility;
+						//damageType.damageSource = DamageSource.Utility;
 						blastAttack.damageType = damageType;
 						blastAttack.attackerFiltering = AttackerFiltering.Default;
 						//blastAttack.impactEffect = 

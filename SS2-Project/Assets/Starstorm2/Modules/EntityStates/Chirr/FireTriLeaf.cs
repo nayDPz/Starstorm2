@@ -90,9 +90,9 @@ namespace EntityStates.Chirr
                 float maxSpreadLerped = Mathf.Lerp(FireTriLeaf.minSpread, FireTriLeaf.maxSpread, (float)shotsFired / (float)numShots);
                 Ray aimRay = base.GetAimRay();
                 aimRay.direction = Util.ApplySpread(aimRay.direction, minSpreadLerped, maxSpreadLerped, 1f, pitchCoefficient);
-                ProjectileManager.instance.FireProjectile(projectilePrefab, aimRay.origin, 
-                    Util.QuaternionSafeLookRotation(aimRay.direction), base.gameObject, 
-                    this.damageStat * damageCoefficient, force, this.isCrit, damageType: new DamageTypeCombo(DamageType.Generic, DamageTypeExtended.Generic, DamageSource.Primary));
+                ProjectileManager.instance.FireProjectile(projectilePrefab, aimRay.origin,
+                    Util.QuaternionSafeLookRotation(aimRay.direction), base.gameObject,
+                    this.damageStat * damageCoefficient, force, this.isCrit);//, damageType: new DamageTypeCombo(DamageType.Generic, DamageTypeExtended.Generic, DamageSource.Primary));
             }
         }
 

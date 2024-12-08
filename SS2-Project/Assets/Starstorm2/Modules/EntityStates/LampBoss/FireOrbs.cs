@@ -56,19 +56,19 @@ namespace EntityStates.LampBoss
             //Util.PlayAttackSpeedSound("LampBullet", gameObject, characterBody.attackSpeed);
 
             DamageTypeCombo damageType = DamageType.Generic;
-            damageType.damageSource = DamageSource.Primary;
+            //damageType.damageSource = DamageSource.Primary;
             ProjectileManager.instance.FireProjectile(
                 projectile,
                 muzzle.position,
-                Util.QuaternionSafeLookRotation(angle), 
-                gameObject, 
-                damage, 
-                20f, 
-                RollCrit(), 
-                DamageColorIndex.Default, 
-                null, 
-                projectileSpeed,
-                damageType);
+                Util.QuaternionSafeLookRotation(angle),
+                gameObject,
+                damage,
+                20f,
+                RollCrit(),
+                DamageColorIndex.Default,
+                null,
+                projectileSpeed);
+                //damageType);
         }
 
         public override void FixedUpdate()

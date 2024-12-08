@@ -69,7 +69,7 @@ namespace EntityStates.Runshroom
             float damage = damageCoefficient * damageStat;
             Ray aimRay = GetAimRay();
             DamageTypeCombo damageType = DamageType.Generic;
-            damageType.damageSource = DamageSource.Primary;
+            //damageType.damageSource = DamageSource.Primary;
             ProjectileManager.instance.FireProjectile(
                 projectilePrefab,
                 aimRay.origin,
@@ -80,8 +80,8 @@ namespace EntityStates.Runshroom
                 RollCrit(),
                 DamageColorIndex.Default,
                 null,
-                projectileVelocity,
-                damageType);
+                projectileVelocity);
+                //damageType);
         }
 
         public override void OnExit()

@@ -107,7 +107,7 @@ namespace EntityStates.NemCommando
                 }
 
                 DamageTypeCombo damageType = DamageType.Generic;
-                damageType.damageSource = DamageSource.Secondary;
+                //damageType.damageSource = DamageSource.Secondary;
                 BulletAttack bulletAttack = new BulletAttack
                 {
                     bulletCount = 1,

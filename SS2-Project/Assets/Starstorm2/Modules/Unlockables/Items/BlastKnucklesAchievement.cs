@@ -24,11 +24,11 @@ namespace SS2.Unlocks.Pickups
         {
             CharacterBody body = damageReport.victimBody;
             HealthComponent healthComponent = body.healthComponent;
-            DamageSource damageSource = damageReport.damageInfo.damageType.damageSource;
+            //DamageSource damageSource = damageReport.damageInfo.damageType.damageSource;
             if (body.isBoss && body.isChampion // is boss
                 && healthComponent.serverDamageTakenThisUpdate >= healthComponent.fullCombinedHealth // is 1shot
-                && damageReport.attacker == localUser.cachedBodyObject
-                && (damageSource == DamageSource.Utility || damageSource == DamageSource.Primary)) // is punch
+                && damageReport.attacker == localUser.cachedBodyObject)
+                //&& (damageSource == DamageSource.Utility || damageSource == DamageSource.Primary)) // is punch
             {
                  Grant();                   
             }

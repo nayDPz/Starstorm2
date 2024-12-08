@@ -165,7 +165,7 @@ namespace EntityStates.Cyborg2
             if (base.isAuthority)
             {
                 DamageTypeCombo damageType = DamageType.Generic;
-                damageType.damageSource = DamageSource.Primary;
+                //damageType.damageSource = DamageSource.Primary;
                 new BulletAttack
                 {
                     owner = base.gameObject,

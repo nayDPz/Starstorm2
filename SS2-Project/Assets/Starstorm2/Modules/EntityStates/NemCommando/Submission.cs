@@ -97,7 +97,7 @@ namespace EntityStates.NemCommando
             if (isAuthority)
             {
                 DamageTypeCombo damageType = DamageType.Stun1s;
-                damageType.damageSource = DamageSource.Special;
+                //damageType.damageSource = DamageSource.Special;
                 BulletAttack bulletAttack = new BulletAttack
                 {
                     owner = gameObject,
