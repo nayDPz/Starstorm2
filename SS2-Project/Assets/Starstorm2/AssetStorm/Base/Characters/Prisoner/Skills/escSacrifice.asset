@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 89795172, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: escSacrifice
+  m_EditorClassIdentifier: 
+  targetType:
+    assemblyQualifiedName: EntityStates.Prisoner.Weapon.Sacrifice, Starstorm2, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  serializedFieldsCollection:
+    serializedFields:
+    - fieldName: orbEffectPrefab
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 1982729521916602, guid: 9bef7cbdd13c23b4594d0d9b1c435bef,
+          type: 3}
+    - fieldName: explosionEffectPrefab
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 1757098401074883, guid: 889c66862918b754fa3a20c700403abb,
+          type: 3}
+    - fieldName: healthOrbEffectPrefab
+      fieldValue:
+        stringValue: 
+        objectValue: {fileID: 1103265275148065, guid: 90eb91ab4bb88094bb1915fa98d97616,
+          type: 3}

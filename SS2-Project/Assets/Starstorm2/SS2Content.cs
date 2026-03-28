@@ -716,6 +716,9 @@ namespace SS2
 
             public static BuffDef bdDUTDrift;
 
+            public static BuffDef bdPrisonerBlock;
+
+            public static BuffDef bdPrisonerBoost;
         }
 
         public static class Elites
@@ -761,6 +764,8 @@ namespace SS2
             public static SurvivorDef NemMerc;
 
             public static SurvivorDef NemExecutioner;
+
+            public static SurvivorDef Prisoner;
         }
 
         public static class ItemTierDefs
